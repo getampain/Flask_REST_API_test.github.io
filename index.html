@@ -6,10 +6,15 @@
 -->
 <html>
 	<head>
-		<title>Prologue by HTML5 UP</title>
+		<title>Flask and REST API...</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style type="text/css">
+			.explain{
+				text-align: left;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -21,17 +26,17 @@
 					<!-- Logo -->
 						<div id="logo">
 							<span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span>
-							<h1 id="title">Jane Doe</h1>
-							<p>Hyperspace Engineer</p>
+							<h1 id="title">유상욱</h1>
+							<p></p>
 						</div>
 
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li><a href="#top" id="top-link"><span class="icon fa-home">Intro</span></a></li>
-								<li><a href="#portfolio" id="portfolio-link"><span class="icon fa-th">Portfolio</span></a></li>
-								<li><a href="#about" id="about-link"><span class="icon fa-user">About Me</span></a></li>
-								<li><a href="#contact" id="contact-link"><span class="icon fa-envelope">Contact</span></a></li>
+								<li><a href="#top" id="top-link"><span class="icon fa-th">Enviroment</span></a></li>
+								<li><a href="#portfolio" id="portfolio-link"><span class="icon fa-th">Code</span></a></li>
+								<li><a href="#about" id="about-link"><span class="icon fa-th">About Me</span></a></li>
+								
 							</ul>
 						</nav>
 
@@ -60,82 +65,96 @@
 						<div class="container">
 
 							<header>
-								<h2 class="alt">Hi! I'm <strong>Prologue</strong>, a <a href="http://html5up.net/license">free</a> responsive<br />
-								site template designed by <a href="http://html5up.net">HTML5 UP</a>.</h2>
-								<p>Ligula scelerisque justo sem accumsan diam quis<br />
-								vitae natoque dictum sollicitudin elementum.</p>
+								<br>
+								<h2 class="alt"><strong>Python & &nbsp;Flask REST API</strong></h2>
 							</header>
-
-							<footer>
-								<a href="#portfolio" class="button scrolly">Magna Aliquam</a>
-							</footer>
 
 						</div>
 					</section>
 
 				<!-- Portfolio -->
-					<section id="portfolio" class="two">
+					<section class="two">
 						<div class="container">
 
 							<header>
-								<h2>Portfolio</h2>
+								<h2>환경 구축</h2>
 							</header>
 
-							<p>Vitae natoque dictum etiam semper magnis enim feugiat convallis convallis
-							egestas rhoncus ridiculus in quis risus amet curabitur tempor orci penatibus.
-							Tellus erat mauris ipsum fermentum etiam vivamus eget. Nunc nibh morbi quis
-							fusce hendrerit lacus ridiculus.</p>
+							<p class="explain">먼저 <strong>virtualenv</strong>을 설치하여 독립적인
+							개발환경을 구축해줍니다. <strong>virtualenv</strong>를 사용하면 샌드박스속에 설치되기 때문에 시스템의 라이브러리에 여향을 주지 않고 필요가 없어지면 바로 삭제가 가능하여 시스템을 관리하는데 용이합니다.</p>
 
-							<div class="row">
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
-										<header>
-											<h3>Ipsum Feugiat</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
-										<header>
-											<h3>Rhoncus Semper</h3>
-										</header>
-									</article>
-								</div>
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
-										<header>
-											<h3>Magna Nullam</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
-										<header>
-											<h3>Natoque Vitae</h3>
-										</header>
-									</article>
-								</div>
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
-										<header>
-											<h3>Dolor Penatibus</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
-										<header>
-											<h3>Orci Convallis</h3>
-										</header>
-									</article>
-								</div>
-							</div>
+							<p class="explain">pip이 깔려있다면 pip명령어를 사용하여도 되며 pip이 설치되어 있지 않다면 apt-get 명령어를 사용하여 설치하여도 됩니다. 설치가 잘 되었는지 확인하기 위하여 설치가 끝난 이후에는 --version 명령어를 입력하여 확인해 줍니다.</p>
+							<!-- HTML generated using hilite.me --><div style="text-align: left; background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .1em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">$ sudo pip install virtualenv<br><br>$ sudo apt-get install python-virtualenv<br><br>$ virtualenv --version</pre></div><br><br>
+							<p class="explain"><strong>virtualenv</strong>를 설치했다면 원하는 디렉토리의 위치로 이동하여 다음과 같은 명령어를 입력해  <strong>virtualenv</strong>를 실행해주고  flask와 flask API 모듈 설치를 진행해 줍니다.</p>
+
+							<!-- HTML generated using hilite.me --><div style="text-align: left; background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .1em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">$ virtualenv env<br><br>$ source env/bin/activate<br><br>$ sudo pip install Flask<br><br>$ sudo pip install flask-restful<br></pre></div><br><br>
+
+
+					
+
+						</div>
+					</section>
+					
+					<section class="three" id="portfolio">
+						<div class="container">
+
+							<header>
+								<h2>Python Code</h2>
+							</header>
+
+							<p class="explain">원하는 디렉토리 내부에 원하는 이름으로 .py형식의 파일을 내용물은 아래와 같이 만들어 줍니다. 예시 파일의 이름은 test.py입니다.</p>
+
+							<!-- HTML generated using hilite.me --><div style="text-align: left; background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .1em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #f92672">from</span> <span style="color: #f8f8f2">flask</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">Flask</span>                                               
+<span style="color: #f92672">from</span> <span style="color: #f8f8f2">flask_restful</span> <span style="color: #f92672">import</span> <span style="color: #f8f8f2">Resource,</span> <span style="color: #f8f8f2">Api</span>                               
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">sqlite3</span>                                                        
+<span style="color: #f92672">import</span> <span style="color: #f8f8f2">json</span>                                                           
+                                                                                                                                               
+<span style="color: #f8f8f2">app</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">Flask(__name__)</span>                                                 
+<span style="color: #f8f8f2">api</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">Api(app)</span>                                                        
+                                                                                                                                                                              
+<span style="color: #66d9ef">class</span> <span style="color: #a6e22e">TestPost</span><span style="color: #f8f8f2">(Resource):</span>
+	<span style="color: #66d9ef">def</span> <span style="color: #a6e22e">post</span><span style="color: #f8f8f2">(self,id):</span>                                                
+ 		<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">id</span> <span style="color: #f92672">==</span> <span style="color: #ae81ff">10</span><span style="color: #f8f8f2">:</span>                                                  
+ 			<span style="color: #66d9ef">return</span><span style="color: #f8f8f2">{</span><span style="color: #e6db74">&#39;post_test&#39;</span><span style="color: #f8f8f2">:</span><span style="color: #e6db74">&#39;success&#39;</span><span style="color: #f8f8f2">}</span>                                        
+		<span style="color: #66d9ef">else</span><span style="color: #f8f8f2">:</span>                                                         
+			<span style="color: #66d9ef">return</span><span style="color: #f8f8f2">{</span><span style="color: #e6db74">&#39;post_test&#39;</span><span style="color: #f8f8f2">:</span><span style="color: #e6db74">&#39;fail&#39;</span><span style="color: #f8f8f2">},</span><span style="color: #ae81ff">404</span> 
+
+<span style="color: #66d9ef">class</span> <span style="color: #a6e22e">TestGet</span><span style="color: #f8f8f2">(Resource):</span>
+	<span style="color: #66d9ef">def</span> <span style="color: #a6e22e">get</span><span style="color: #f8f8f2">(self,id):</span>                                                
+ 		<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">id</span> <span style="color: #f92672">==</span> <span style="color: #ae81ff">10</span><span style="color: #f8f8f2">:</span>                                                  
+ 			<span style="color: #66d9ef">return</span><span style="color: #f8f8f2">{</span><span style="color: #e6db74">&#39;get_test&#39;</span><span style="color: #f8f8f2">:</span><span style="color: #e6db74">&#39;success&#39;</span><span style="color: #f8f8f2">}</span>                                        
+		<span style="color: #66d9ef">else</span><span style="color: #f8f8f2">:</span>                                                         
+			<span style="color: #66d9ef">return</span><span style="color: #f8f8f2">{</span><span style="color: #e6db74">&#39;get_test&#39;</span><span style="color: #f8f8f2">:</span><span style="color: #e6db74">&#39;fail&#39;</span><span style="color: #f8f8f2">},</span><span style="color: #ae81ff">404</span>
+
+<span style="color: #f8f8f2">api</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">add_resource(TestPost,</span><span style="color: #e6db74">&#39;/&#39;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&#39;/testp/&lt;int:id&gt;&#39;</span><span style="color: #f8f8f2">)</span>
+<span style="color: #f8f8f2">api</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">add_resource(TestGet,</span><span style="color: #e6db74">&#39;/&#39;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&#39;/testg/&lt;int:id&gt;&#39;</span><span style="color: #f8f8f2">)</span> 
+
+<span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">__name__</span> <span style="color: #f92672">==</span> <span style="color: #e6db74">&#39;__main__&#39;</span><span style="color: #f8f8f2">:</span>                                            
+	<span style="color: #f8f8f2">app</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">run(host</span><span style="color: #f92672">=</span><span style="color: #e6db74">&#39;0.0.0.0&#39;</span><span style="color: #f8f8f2">,debug</span><span style="color: #f92672">=</span><span style="color: #e6db74">&#39;True&#39;</span><span style="color: #f8f8f2">)</span>
+</pre></div><br>
+
+
+
+							<p class="explain">flask와 API모듈을 import 해준 뒤 test용 GET method와 POST method를 추가한 형태입니다. 파일을 작성을 완료한뒤 test.py 파일을 실행 시켜주면 아래와 같은 화면이 표출되며 서버가 구동하게 됩니다. 서버의 종료는 컨트롤 +C 를 입력하여 가능합니다.</p>
+
+							<!-- HTML generated using hilite.me --><div style="text-align: left; background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .1em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">$ python test.py</pre></div><br><br>
+
+							<img class="image featured" src="images/server.PNG" alt="" />
+							
+							<p class="explain">작동의 확인은 Insomnia 같은 프로그램을 통하여 가능합니다. 상단의 method의 종류를 선택해준뒤 localhost의 경우에는 <strong>127.0.0.1:5000</strong> 을 아닐경우에는 <strong>IP주소:5000</strong> 을 입력한 뒤 이전에 선언해준 /testp/ 나 /testg/ 의 뒤에 숫자를 입력하여 아래이미지와 같이 결과를 확인할 수 있습니다. 10을 넣었을경우 success값이 들어가있는 JSON 형태의 데이터가 날라오며 그 이외의 int 값이 들어갔을경우 fail 형태의 JSON값이 날라옵니다.</p>
+
+
+							<img class="image featured" src="images/success.PNG" alt="" /><br><br>
+							<img class="image featured" src="images/fail.PNG" alt="" /><br><br>
+							
 
 						</div>
 					</section>
 
+
+
 				<!-- About Me -->
-					<section id="about" class="three">
+					<section id="about" class="four">
 						<div class="container">
 
 							<header>
@@ -144,44 +163,12 @@
 
 							<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
 
-							<p>Tincidunt eu elit diam magnis pretium accumsan etiam id urna. Ridiculus
-							ultricies curae quis et rhoncus velit. Lobortis elementum aliquet nec vitae
-							laoreet eget cubilia quam non etiam odio tincidunt montes. Elementum sem
-							parturient nulla quam placerat viverra mauris non cum elit tempus ullamcorper
-							dolor. Libero rutrum ut lacinia donec curae mus vel quisque sociis nec
-							ornare iaculis.</p>
+							<p>언제나 잠만 자고싶은.....</p>
 
 						</div>
 					</section>
 
-				<!-- Contact -->
-					<section id="contact" class="four">
-						<div class="container">
 
-							<header>
-								<h2>Contact</h2>
-							</header>
-
-							<p>Elementum sem parturient nulla quam placerat viverra
-							mauris non cum elit tempus ullamcorper dolor. Libero rutrum ut lacinia
-							donec curae mus. Eleifend id porttitor ac ultricies lobortis sem nunc
-							orci ridiculus faucibus a consectetur. Porttitor curae mauris urna mi dolor.</p>
-
-							<form method="post" action="#">
-								<div class="row">
-									<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
-									<div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email" /></div>
-									<div class="col-12">
-										<textarea name="message" placeholder="Message"></textarea>
-									</div>
-									<div class="col-12">
-										<input type="submit" value="Send Message" />
-									</div>
-								</div>
-							</form>
-
-						</div>
-					</section>
 
 			</div>
 
