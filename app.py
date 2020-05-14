@@ -1,6 +1,5 @@
 from flask import Flask
 from flask_restful import Resource, Api
-import sqlite3
 import json
 
 app = Flask(__name__)
@@ -16,15 +15,15 @@ class TestPost(Resource):
 
 
 class TestGet(Resource):
-    def get(self, id):
-        if id == 10:
+    def get(self, id, pw):
+        if id == "abc" and pw == "1234":
             return {'get_test': 'success'}
         else:
             return {'get_test': 'fail'}, 404
 
 
 api.add_resource(TestPost, '/', '/testp/<int:id>')
-api.add_resource(TestGet, '/', '/testg/<int:id>')
+api.add_resource(TestGet, '/', '/login/<string:id>/<string:pw>')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug='True')
