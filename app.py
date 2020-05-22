@@ -19,7 +19,7 @@ class TestPost(Resource):
 
 class TestGet(Resource):
     def get(self, id, pw):
-        conn = pymysql.connect(host='34.84.246.239', port=3306, user='root', passwd='1234', db='flask')
+        conn = pymysql.connect(host='127.0.0.1', port=3306, user='root', passwd='1234', db='flask')
         cur = conn.cursor()
         sql = "SELECT * FROM flask.userInfo WHERE userid = '"+id+"' and userpw = '"+pw+"' "
         row = cur.execute(sql)
